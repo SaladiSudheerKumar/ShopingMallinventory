@@ -1,0 +1,77 @@
+agm-map {
+    height: 300px;
+}
+.sidebar{
+    padding: 30px 20px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    position: fixed;
+    top: 80px;
+    max-width: 300px;
+    height: 100vh;
+}
+h3.title{
+    color: #119df2;
+    font-weight: bold;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+.box1{
+margin-bottom: 20px;
+}
+.box1 ul{
+    height: 150px;
+    overflow-y: scroll;
+    list-style: none;
+    padding-left: 0px;
+}
+.box1 ul li {
+    padding: 10px 10px;
+    color: #000;
+    font-size: 18px;
+}
+.col-sm-9{
+    margin-left: auto !important;
+    padding-left: 40px;
+    padding-top: 60px;
+}
+.space {
+    flex: 0 0 24%;
+}
+.searchbar-block.d-flex {
+    padding: 20px 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    border-radius: 6px;
+}
+.shopslist-main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.title-blo {
+    background: #000;
+    text-align:center;
+    padding: 10px;
+}
+p.cate-title {
+    margin-bottom: 0px;
+    color: #ccc;
+}
+b.shop-title {
+    color: #119df2;
+    font-size: 20px;
+}
+.img-blo img {
+    width: 100%;
+    object-fit: cover;
+}
+.shop {
+    flex: 0 0 32%;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+.img-blo{
+    padding: 5px;
+    border: 1px solid #ccc;
+}

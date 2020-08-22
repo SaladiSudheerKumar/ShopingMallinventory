@@ -1,0 +1,364 @@
+<nav class="navbar navbar-dark bg-primary navbar-expand-lg bg-primary fixed-top ">
+	<div class="container">
+		<a class="navbar-brand" href="#">Navbar</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	  <span class="navbar-toggler-icon"></span>
+	</button>
+  
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+	  <ul class="navbar-nav ml-auto">
+		<li class="nav-item active">
+		  <a class="nav-link" href="#" (click)="setState('list')">Home <span class="sr-only">(current)</span></a>
+		</li>
+		<li class="nav-item">
+		  <a class="nav-link" href="#"   (click)="setState('addShop')">Add Shops</a>
+		</li>
+		<li class="nav-item dropdown">
+		  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Categories
+		  </a>
+		  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+			<a class="dropdown-item" href="#"  (click)="setState('addShop')">Add Shop</a>
+			<a class="dropdown-item" href="#">Mall</a>
+			<div class="dropdown-divider"></div>
+			<a class="dropdown-item" href="#">Near By Shops</a>
+		  </div>
+		</li>
+	  </ul>
+	</div>
+	</div>	
+  </nav>
+
+  <div class="main-content">
+	  <div class="container">
+		  <div class="row">
+			  <!-- <div class="col-sm-3 sidebar shadow-xs">
+				  <div class="box1">
+					  <h3 class="title">Categories</h3>
+					  <ul>
+						  <li>
+							<div class="form-check d-flex align-items-center">
+								<input type="checkbox" class="form-check-input" id="exampleCheck1">
+								<label class="form-check-label" for="exampleCheck1">Sample text 1</label>
+							  </div>
+						  </li>
+						  <li>
+							<div class="form-check d-flex align-items-center">
+								<input type="checkbox" class="form-check-input" id="exampleCheck1">
+								<label class="form-check-label" for="exampleCheck1">Sample text 1</label>
+							  </div>
+						  </li>
+						  <li>
+							<div class="form-check d-flex align-items-center">
+								<input type="checkbox" class="form-check-input" id="exampleCheck1">
+								<label class="form-check-label" for="exampleCheck1">Sample text 1</label>
+							  </div>
+						  </li>
+						  <li>
+							<div class="form-check d-flex align-items-center">
+								<input type="checkbox" class="form-check-input" id="exampleCheck1">
+								<label class="form-check-label" for="exampleCheck1">Sample text 1</label>
+							  </div>
+						  </li>
+						  <li>
+							<div class="form-check d-flex align-items-center">
+								<input type="checkbox" class="form-check-input" id="exampleCheck1">
+								<label class="form-check-label" for="exampleCheck1">Sample text 1</label>
+							  </div>
+						  </li>
+						  <li>
+							<div class="form-check d-flex align-items-center">
+								<input type="checkbox" class="form-check-input" id="exampleCheck1">
+								<label class="form-check-label" for="exampleCheck1">Sample text 1</label>
+							  </div>
+						  </li>
+						  <li>
+							<div class="form-check d-flex align-items-center">
+								<input type="checkbox" class="form-check-input" id="exampleCheck1">
+								<label class="form-check-label" for="exampleCheck1">Sample text 1</label>
+							  </div>
+						  </li>
+						  <li>
+							<div class="form-check d-flex align-items-center">
+								<input type="checkbox" class="form-check-input" id="exampleCheck1">
+								<label class="form-check-label" for="exampleCheck1">Sample text 1</label>
+							  </div>
+						  </li>
+						  <li>
+							<div class="form-check d-flex align-items-center">
+								<input type="checkbox" class="form-check-input" id="exampleCheck1">
+								<label class="form-check-label" for="exampleCheck1">Sample text 1</label>
+							  </div>
+						  </li>
+					  </ul>
+				  </div>
+				  <div class="box1">
+					<h3 class="title">Offers</h3>
+					<ul>
+						<li>
+						  <div class="form-check d-flex align-items-center">
+							  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+							  <label class="form-check-label" for="exampleCheck1">Sample text 1</label>
+							</div>
+						</li>
+						<li>
+						  <div class="form-check d-flex align-items-center">
+							  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+							  <label class="form-check-label" for="exampleCheck1">Sample text 1</label>
+							</div>
+						</li>
+						<li>
+						  <div class="form-check d-flex align-items-center">
+							  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+							  <label class="form-check-label" for="exampleCheck1">Sample text 1</label>
+							</div>
+						</li>
+						<li>
+						  <div class="form-check d-flex align-items-center">
+							  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+							  <label class="form-check-label" for="exampleCheck1">Sample text 1</label>
+							</div>
+						</li>
+						<li>
+						  <div class="form-check d-flex align-items-center">
+							  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+							  <label class="form-check-label" for="exampleCheck1">Sample text 1</label>
+							</div>
+						</li>
+						<li>
+						  <div class="form-check d-flex align-items-center">
+							  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+							  <label class="form-check-label" for="exampleCheck1">Sample text 1</label>
+							</div>
+						</li>
+						<li>
+						  <div class="form-check d-flex align-items-center">
+							  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+							  <label class="form-check-label" for="exampleCheck1">Sample text 1</label>
+							</div>
+						</li>
+						<li>
+						  <div class="form-check d-flex align-items-center">
+							  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+							  <label class="form-check-label" for="exampleCheck1">Sample text 1</label>
+							</div>
+						</li>
+						<li>
+						  <div class="form-check d-flex align-items-center">
+							  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+							  <label class="form-check-label" for="exampleCheck1">Sample text 1</label>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="box1">
+					<h3 class="title">Shops</h3>
+					<ul>
+						<li>
+						  <div class="form-check d-flex align-items-center">
+							  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+							  <label class="form-check-label" for="exampleCheck1">Sample text 1</label>
+							</div>
+						</li>
+						<li>
+						  <div class="form-check d-flex align-items-center">
+							  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+							  <label class="form-check-label" for="exampleCheck1">Sample text 1</label>
+							</div>
+						</li>
+						<li>
+						  <div class="form-check d-flex align-items-center">
+							  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+							  <label class="form-check-label" for="exampleCheck1">Sample text 1</label>
+							</div>
+						</li>
+						<li>
+						  <div class="form-check d-flex align-items-center">
+							  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+							  <label class="form-check-label" for="exampleCheck1">Sample text 1</label>
+							</div>
+						</li>
+						<li>
+						  <div class="form-check d-flex align-items-center">
+							  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+							  <label class="form-check-label" for="exampleCheck1">Sample text 1</label>
+							</div>
+						</li>
+						<li>
+						  <div class="form-check d-flex align-items-center">
+							  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+							  <label class="form-check-label" for="exampleCheck1">Sample text 1</label>
+							</div>
+						</li>
+						<li>
+						  <div class="form-check d-flex align-items-center">
+							  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+							  <label class="form-check-label" for="exampleCheck1">Sample text 1</label>
+							</div>
+						</li>
+						<li>
+						  <div class="form-check d-flex align-items-center">
+							  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+							  <label class="form-check-label" for="exampleCheck1">Sample text 1</label>
+							</div>
+						</li>
+						<li>
+						  <div class="form-check d-flex align-items-center">
+							  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+							  <label class="form-check-label" for="exampleCheck1">Sample text 1</label>
+							</div>
+						</li>
+					</ul>
+				</div>
+			  </div> -->
+			  <div class="col-sm-9">
+				  <div class="searchbar-block d-flex mt-4 mb-4">
+					  <div class="space"></div>
+					<form class="form-inline my-2 my-lg-0 mr-4">
+						<!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
+						<button class="btn btn-outline-success my-2 my-sm-0" type="submit"   (click)="nearBy()" > Near By Place</button>
+					  </form>
+					  <form class="form-inline my-2 my-lg-0">
+						<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+					  </form>
+				  </div>
+				  <!----- shops ----->
+				  <div class="shopslist-main" *ngIf="moduleName=='list'">
+					  <div class="shop" *ngFor="let shop of data">
+						  <div class="img-blo">
+							  <img src="/assets/shop.jpg">
+						  </div>
+						  <div class="title-blo">
+							  <b class="shop-title">Owner Name: {{shop.ownerName}}</b>
+							  <p class="cate-title">Category {{shop.shopCategory}}</p>
+							  <button type="button" (click)="update(shop.id)" l class="btn-success"><i class="fas fa-pencil-alt"></i></button>
+							  <button type="button" (click)="delete(mymodal,shop.id)"  class="btn-danger"><i class="fas fa-times"></i></button>
+						  </div>
+					  </div>
+			
+				  </div>
+				  <div class="container-fluid p-0"  *ngIf="moduleName=='addShop'">
+					<!-- DataTables Example -->
+					<div class="card mb-3">
+					  <div class="card-header">
+						<b>Add shop</b>
+						<button style="float: right;" type="button" class="btn btn-primary add-new" (click)="setState('list')"><i class="fa fa-list"></i> List shops</button>
+					  </div>
+					  <div class="card-body">
+						<form [formGroup]="addShopForm" class="col-md-6">
+						  <div class="form-group">
+							<label for="exampleFormControlInput1">Shop Name</label>
+							<input type="text" class="form-control" id="shopName" [(ngModel)]="shopName" formControlName="shopName" placeholder="Shop Name" autocomplete="nope">
+						  </div>
+						  <div class="form-group">
+							<label for="exampleFormControlInput1">Category Name</label>
+							
+							<select  class="form-control" placeholder="categoryName" (change)="changeCategory($event.target.value)">
+								<option value="" hidden>Select Category</option>
+								<option  *ngFor="let category of categories"  value={{category.value}} formContolName="shopCategory">
+								  {{category.value}}
+								</option>
+							  </select>
+						  </div>
+						  
+						  	<div class="form-group">
+							<label>Enter address</label>
+							<input type="text" class="form-control" formControlName="address" (keydown.enter)="$event.preventDefault()" placeholder="Search Nearest Location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" #search>
+						   
+							<agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">
+								<agm-marker [latitude]="latitude" [longitude]="longitude" [markerDraggable]="true"
+								  (dragEnd)="markerDragEnd($event)"></agm-marker>
+							  </agm-map>
+						</div>
+						
+						  
+						  <div class="form-group">
+							<label for="exampleFormControlInput1">Owner Name</label>
+							<input type="text" class="form-control" id="ownerName" [(ngModel)]="ownerName" formControlName="ownerName" placeholder="Owner Name" autocomplete="nope">
+						  </div>
+						  <div class="ui-g-12 ui-md-12 ui-lg-12">
+							<button  type="button" label="Submit" (click)="onSubmit()" [disabled]="!addShopForm.valid" class="btn-success">Add </button>
+						  </div>
+						  <div class="ui-g-12 ui-md-4 ui-lg-4"></div>
+						</form>
+					  </div>
+					  <div class="card-footer small text-muted"></div>
+					</div>
+				  </div>
+
+				  <div class="container-fluid p-0"  *ngIf="moduleName=='updateShop'">
+					<!-- DataTables Example -->
+					<div class="card mb-3">
+					  <div class="card-header">
+						<b>Update shop</b>
+						<button style="float: right;" type="button" class="btn btn-primary add-new" (click)="setState('list')"><i class="fa fa-list"></i> List shops</button>
+					  </div>
+					  <div class="card-body">
+						<form [formGroup]="addShopForm" class="col-md-6">
+						  <div class="form-group">
+							<label for="exampleFormControlInput1">Shop Name</label>
+							<input type="text" class="form-control" id="shopName" [(ngModel)]="shopName" formControlName="shopName" placeholder="Shop Name" autocomplete="nope">
+						  </div>
+						  <div class="form-group">
+							<label for="exampleFormControlInput1">Category Name</label>
+							
+							<select  class="form-control" placeholder="categoryName" (change)="changeCategory($event.target.value)">
+								<option value="" hidden>Select Category</option>
+								<option  *ngFor="let category of categories"  value={{category.value}} formContolName="shopCategory">
+								  {{category.value}}
+								</option>
+							  </select>
+						  </div>
+						  
+						  	<div class="form-group">
+							<label>Enter address</label>
+							<input type="text" class="form-control" formControlName="address" [(ngModel)]="address" (keydown.enter)="$event.preventDefault()" placeholder="Search Nearest Location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" #search>
+						   
+							<agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">
+								<agm-marker [latitude]="latitude" [longitude]="longitude" [markerDraggable]="true"
+								  (dragEnd)="markerDragEnd($event)"></agm-marker>
+							  </agm-map>
+						</div>
+						<div class="form-group">
+							<label for="exampleFormControlInput1">Longitude</label>
+							<input type="text" class="form-control" id="longitude" [(ngModel)]="longitude" formControlName="longitude" placeholder="longitude" autocomplete="nope">
+						  </div>
+						
+						  
+						  <div class="form-group">
+							<label for="exampleFormControlInput1">Owner Name</label>
+							<input type="text" class="form-control" id="ownerName" [(ngModel)]="ownerName" formControlName="ownerName" placeholder="Owner Name" autocomplete="nope">
+						  </div>
+						  <div class="ui-g-12 ui-md-12 ui-lg-12">
+							<button  type="button" label="Submit" (click)="onSubmit()" [disabled]="!addShopForm.valid" class="btn-success">Update </button>
+							<button  type="button" label="Submit" (click)="cancel()" [disabled]="!addShopForm.valid" class="btn-success">Cancel </button>
+						  </div>
+						  <div class="ui-g-12 ui-md-4 ui-lg-4"></div>
+						</form>
+					  </div>
+					  <div class="card-footer small text-muted"></div>
+					</div>
+				  </div>
+			  </div>
+		  </div>
+	  </div>
+  </div>
+
+
+  <!-- <button class="btn btn-lg btn-outline-primary" (click)="open(mymodal)">Open My Modal</button> -->
+   
+<ng-template #mymodal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Shop</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+  <div class="modal-body">
+   Are u want to delete Shop
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')" (click)="deleteRecord()">Ok</button>
+  </div>
+</ng-template>
