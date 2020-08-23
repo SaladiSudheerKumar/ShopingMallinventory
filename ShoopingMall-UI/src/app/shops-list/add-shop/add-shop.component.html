@@ -17,6 +17,7 @@
                         <div class="form-group">
                           <label for="exampleFormControlInput1">Shop Name</label>
                           <input type="text" class="form-control" id="shopName" [(ngModel)]="shopName" formControlName="shopName"  placeholder="Shop Name" autocomplete="nope">
+                          <div *ngIf="!addShopForm.get('shopName').valid && addShopForm.get('shopName').touched" style="color:#f00;">Minimum 4 Characters</div>
                         </div>
                         <div class="form-group">
                           <label for="exampleFormControlInput1">Category Name</label>
@@ -43,6 +44,7 @@
                         <div class="form-group">
                           <label for="exampleFormControlInput1">Owner Name</label>
                           <input type="text" class="form-control" id="ownerName" [(ngModel)]="ownerName" formControlName="ownerName" placeholder="Owner Name" autocomplete="nope">
+                          <div *ngIf="!addShopForm.get('ownerName').valid && addShopForm.get('ownerName').touched" style="color:#f00;">Minimum 4 Characters</div> 
                         </div>
                         <div class="ui-g-12 ui-md-12 ui-lg-12">
                           <button  type="button" label="Submit" (click)="onSubmit()" [disabled]="!addShopForm.valid" class="btn-success">Add Shop</button> &nbsp;

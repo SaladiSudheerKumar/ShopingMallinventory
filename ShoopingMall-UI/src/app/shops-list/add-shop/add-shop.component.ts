@@ -40,9 +40,9 @@ export class AddShopComponent implements OnInit {
 
     this.addShopForm=this.fb.group({
     
-      shopName:['',Validators.required],
+      shopName:['',[Validators.required, Validators.minLength(4)]],
       shopCategory:['',Validators.required],
-      ownerName:['',Validators.required],
+      ownerName:['',[Validators.required, Validators.minLength(4)]],
       address:['',Validators.required],
       longitude:[''],
       latitude:[''],
@@ -54,7 +54,7 @@ export class AddShopComponent implements OnInit {
       { key: 'Shop', value: 'Medical Shop' },
       { key: 'Malls', value: 'Malls' },
       { key: 'Hospital', value: 'Hospital' },
-     
+      { key:  'Hotel', value:'Hotel'}
         ];
 
 
