@@ -1,0 +1,51 @@
+
+  <div class="main-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9">
+                <div class="searchbar-block d-flex mt-4 mb-4">
+                    <div class="space"></div>
+                  <form class="form-inline my-2 my-lg-0 mr-4">
+                 
+                      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" [routerLink]="['/nearBy']" > Near By Place</button>
+                           
+                    </form>
+                  </div>
+                <!----- shops ----->
+                <div class="shopslist-main">
+                    <div class="shop" *ngFor="let shop of data">
+                        <div class="img-blo">
+                            <img src="/assets/shop.jpg">
+                        </div>
+                        <div class="title-blo">
+                            <b class="shop-title">Owner Name: {{shop.ownerName}}</b>
+                            <p class="cate-title">Category {{shop.shopCategory}}</p>
+                             <p class="cate-title">Longitude {{shop.longitude}}</p>
+                            <button type="button"  class="btn-success" (click)="update(shop.id)" ><i class="fas fa-pencil-alt"></i></button>
+                            <button type="button"   class="btn-danger" (click)="delete(mymodal,shop.id)"><i class="fas fa-times"></i></button>
+                        </div>
+                    </div>
+          
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<ng-template #mymodal let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Shop</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">close</span>
+      </button>
+    </div>
+    <div class="modal-body">
+     Are u want to delete Shop
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark"  (click)="deleteRecord()">Delete</button>
+    </div>
+  </ng-template>

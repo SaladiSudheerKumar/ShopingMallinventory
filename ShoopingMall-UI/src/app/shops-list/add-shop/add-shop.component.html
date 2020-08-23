@@ -1,0 +1,61 @@
+<div class="main-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9">
+
+                <!----- shops ----->
+ 
+                <div class="container-fluid p-0"  >
+                  <!-- DataTables Example -->
+                  <div class="card mb-3">
+                    <div class="card-header">
+                      <b>Add shop</b>
+                      <button style="float: right;" type="button" class="btn btn-primary add-new" [routerLink]="['/HomePage']"><i class="fa fa-list"></i> List shops</button>
+                    </div>
+                    <div class="card-body">
+                      <form [formGroup]="addShopForm" class="col-md-6">
+                        <div class="form-group">
+                          <label for="exampleFormControlInput1">Shop Name</label>
+                          <input type="text" class="form-control" id="shopName" [(ngModel)]="shopName" formControlName="shopName"  placeholder="Shop Name" autocomplete="nope">
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleFormControlInput1">Category Name</label>
+                          
+                          <select  class="form-control" placeholder="categoryName" (change)="changeCategory($event.target.value)">
+                              <option value="" hidden>Select Category</option>
+                              <option  *ngFor="let category of categories"  value={{category.value}} formContolName="shopCategory">
+                                {{category.value}}
+                              </option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Enter address</label>
+                            <input type="text" class="form-control" formControlName="address" [(ngModel)]="address" (keydown.enter)="$event.preventDefault()" placeholder="Search Nearest Location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" #search>
+                           
+                            <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">
+                                <agm-marker [latitude]="latitude" [longitude]="longitude" [markerDraggable]="true"
+                                  (dragEnd)="markerDragEnd($event)"></agm-marker>
+                              </agm-map>
+                        </div>
+                      
+                        
+                        <div class="form-group">
+                          <label for="exampleFormControlInput1">Owner Name</label>
+                          <input type="text" class="form-control" id="ownerName" [(ngModel)]="ownerName" formControlName="ownerName" placeholder="Owner Name" autocomplete="nope">
+                        </div>
+                        <div class="ui-g-12 ui-md-12 ui-lg-12">
+                          <button  type="button" label="Submit" (click)="onSubmit()" [disabled]="!addShopForm.valid" class="btn-success">Add Shop</button> &nbsp;
+                          <button  type="button" label="Submit"  [routerLink]="['/HomePage']"  class="btn-success">Cancel</button>
+                        </div>
+                        <div class="ui-g-12 ui-md-4 ui-lg-4"></div>
+                      </form>
+                    </div>
+                    <div class="card-footer small text-muted"></div>
+                  </div>
+                </div>
+
+       </div>
+    </div>
+</div>
+
